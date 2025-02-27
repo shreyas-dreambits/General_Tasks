@@ -8,14 +8,7 @@
 
 def encrytedText(encoded_string):
 
-    cleaned_Data = encoded_string.replace('0',' ').split(' ')
-    print(cleaned_Data)
-
-    for i in cleaned_Data:
-        if i == '':
-            cleaned_Data.remove('')
-        else:
-            cleaned_Data.remove('')
+    cleaned_Data = encoded_string.replace('0',' ').split()
 
     return {
             'first_name': cleaned_Data[0],

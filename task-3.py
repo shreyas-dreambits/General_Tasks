@@ -4,15 +4,18 @@
 # duplicate letters, else return False.
 
 
+strings = set()
+
 def check_duplicate(sentence):
-    strings = set()
-    words = sentence.split(' ')
+
+    words = sentence.split()
 
     for word in words:
-        for duplicate_str in word:
-            if duplicate_str in strings:
+        strings.clear()
+        for letter in word:
+            if letter in strings:
                 return True
-            strings.add(duplicate_str)
+            strings.add(letter)
     return False
 
 sentence = 'The person over me looks smart.'
