@@ -4,20 +4,12 @@
 # duplicate letters, else return False.
 
 
-strings = set()
-
-def check_duplicate(sentence):
-
-    words = sentence.split()
-
-    for word in words:
-        strings.clear()
-        for letter in word:
-            if letter in strings:
-                return True
-            strings.add(letter)
+def check_duplicate(word):
+    for letter in word:
+        if word.count(letter) > 1:
+            return True
     return False
 
-sentence = 'The person over me looks smart.'
-duplicate_letters = check_duplicate(sentence.lower())
+word = 'sentence'
+duplicate_letters = check_duplicate(word.lower())
 print(duplicate_letters)

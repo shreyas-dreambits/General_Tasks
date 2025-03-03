@@ -3,13 +3,15 @@
 # Take the total number of heads and legs as input from the user to calculate 
 # the number of buffaloes and cranes in the park.
 
+total_number_of_heads = int(input('Add the number for buffalo and crane heads : '))
+total_number_of_legs = int(input('Add the number for buffalo and crane legs : '))
 
-def countingParts(buffaloes_heads, buffaloes_legs, cranes_heads, cranes_legs):
+def countingAnimals(total_number_of_heads, total_number_of_legs):
     
-    number_of_buffaloes =  (buffaloes_heads + buffaloes_legs) / 5
-    number_of_cranes = (cranes_heads + cranes_legs) / 3
+    total_number_of_buffaloes = (total_number_of_legs - total_number_of_heads * 2) // 2
+    total_number_of_cranes = total_number_of_heads - total_number_of_buffaloes
 
-    print('total number of buffaloes : ', number_of_buffaloes)
-    print('total number of cranes : ', number_of_cranes)
+    print('total number of buffaloes : ', total_number_of_buffaloes)
+    print('total number of cranes : ', total_number_of_cranes)
 
-countingParts(15,60,12,24)
+countingAnimals(total_number_of_heads, total_number_of_legs)
